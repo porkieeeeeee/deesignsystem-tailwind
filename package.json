@@ -1,8 +1,12 @@
 {
-  "name": "fjdsk",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -41,6 +45,16 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "@emotion/babel-plugin": "^11.11.0",
+    "autoprefixer": "^10.4.19",
+    "babel-plugin-macros": "^3.1.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "twin.macro": "^3.4.1"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
   }
 }
