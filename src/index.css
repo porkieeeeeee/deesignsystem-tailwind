@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        -webkit-text-size-adjust: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @apply w-full h-full m-0 p-0 text-[theme('fontSize.tw18')] font-normal text-grayBlack font-[Pretendard] antialiased bg-grayWhite;
+    }
+
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    fieldset,
+    input,
+    textarea,
+    p,
+    blockquote,
+    select,
+    textarea {
+        webkit-text-size-adjust: none;
+        @apply m-0 p-0 box-border;
+    }
+
+    table,
+    th,
+    td,
+    input,
+    textarea,
+    select,
+    button {
+        @apply box-border  text-[theme('fontSize.tw18')] font-[Pretendard];
+    }
+
+    th,
+    td {
+        -webkit-text-size-adjust: none;
+        word-wrap: break-word;
+        @apply break-all;
+    }
+
+    table {
+        @apply text-sm border-separate border-collapse border-0 table-fixed box-border;
+    }
+
+    address,
+    caption,
+    cite,
+    code,
+    dfn,
+    em,
+    var {
+        -webkit-text-size-adjust: none;
+        @apply not-italic font-normal;
+    }
+
+    em {
+        @apply font-semiBold;
+    }
+
+    ol,
+    ul,
+    li {
+        @apply list-none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-base box-border;
+    }
+
+    legend,
+    caption {
+        @apply invisible overflow-hidden leading-[theme('lineHeight.tw0')] w-0 h-0 m-0 p-0 indent-[-99999px] text-[theme('fontSize.tw0')];
+    }
+
+    img,
+    fieldset {
+        @apply border-0;
+    }
+
+    span,
+    em,
+    strong {
+        @apply box-border;
+    }
+
+    a {
+        @apply text-grayBlack no-underline;
+    }
+
+    input,
+    img {
+        @apply align-middle;
+    }
+
+    input,
+    button {
+        -webkit-appearance: none;
+        @apply rounded-none border-0;
+    }
+
+    button {
+        @apply bg-transparent p-0 m-0 cursor-pointer text-grayBlack text-[18px] whitespace-nowrap;
+        label {
+            @apply align-middle;
+        }
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section,
+    main {
+        @apply block m-0 p-0 box-border;
+    }
+
+    *:before,
+    *:after {
+        @apply box-border;
+    }
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    src: url("./assets/fonts/Pretendard-Regular.woff2") format("woff2"),
+        url("./assets/fonts/Pretendard-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    src: url("./assets/fonts/Pretendard-Medium.woff2") format("woff2"),
+        url("./assets/fonts/Pretendard-Medium.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    src: url("./assets/fonts/Pretendard-SemiBold.woff2") format("woff2"),
+        url("./assets/fonts/Pretendard-SemiBold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    src: url("./assets/fonts/Pretendard-Bold.woff2") format("woff2"),
+        url("./assets/fonts/Pretendard-Bold.woff") format("woff");
+    font-display: swap;
+}

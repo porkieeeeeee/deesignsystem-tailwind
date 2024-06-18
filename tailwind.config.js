@@ -1,62 +1,33 @@
 module.exports = {
-    corePlugins: {
-        preflight: true,
-    },
-    purge: [],
-    darkMode: false, 
+    content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
     theme: {
-        colors: {
-            primary: "#4c6ef5",
-            gray000: "#fff",
-            gray100: "#495057",
-            gray200: "#292e33",
-            gray300: "#212529",
+        extend: {
+            colors: {
+                transparent: "#ffffff00",
+                grayWhite: "#fff",
+                gray50: "#EDF2F5",
+                gray400: "#919BA7",
+                gray800: "#4B535C",
+                gray900: "#3B4147",
+                grayBlack: "#111",
+                secondary300: "#D75C84",
+                secondary400: "#BC3B65",
+            },
+            fontWeight: {
+                regular: 400,
+                medium: 500,
+                semiBold: 600,
+                bold: 700,
+            },
+            fontSize: {
+                tw0: 0,
+                tw18: "18px",
+            },
+            lineHeight: {
+                tw0: 0,
+                tw26: "26px",
+            },
         },
-        fontWeight: {
-            'regular': '400',
-            'medium': '500',
-            'semibold': '600',
-            'bold': '700',
-        },
-        fontFace: {
-            'Pretendard': [
-              {
-                fontWeight: '400',
-                src: [
-                  'url("assets/fonts/Pretendard-Regular.woff2") format("woff2")',
-                  'url("assets/fonts/Pretendard-Regular.woff") format("woff")'
-                ],
-                fontDisplay: 'swap'
-              },
-              {
-                fontWeight: '500',
-                src: [
-                  'url("assets/fonts/Pretendard-Medium.woff2") format("woff2")',
-                  'url("assets/fonts/Pretendard-Medium.woff") format("woff")'
-                ],
-                fontDisplay: 'swap'
-              },
-              {
-                fontWeight: '600',
-                src: [
-                  'url("assets/fonts/Pretendard-SemiBold.woff2") format("woff2")',
-                  'url("assets/fonts/Pretendard-SemiBold.woff") format("woff")'
-                ],
-                fontDisplay: 'swap'
-              },
-              {
-                fontWeight: '700',
-                src: [
-                  'url("assets/fonts/Pretendard-Bold.woff2") format("woff2")',
-                  'url("assets/fonts/Pretendard-Bold.woff") format("woff")'
-                ],
-                fontDisplay: 'swap'
-              }
-            ]
-          }
     },
-    variants: {
-        extend: {},
-    },
-    plugins: [],
+    plugins: [require("@tailwindcss/forms")],
 };
