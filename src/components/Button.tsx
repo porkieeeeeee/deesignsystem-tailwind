@@ -26,8 +26,8 @@ const Button = ({ color, icon = "", isDisabled = false, label = "", onClick }: I
 };
 
 const Container = styled.button<IStyledButtonProps>`
-    ${tw`h-[42px] rounded-[7px] text-lg font-regular leading-8 tracking-[-2px]`}
-    ${({ label }) => (label ? tw`pt-[6px] px-[12px]` : tw`p-[8px]`)};
+    ${tw`h-[42px] rounded-[7px] leading-[theme('lineHeight.tw26')] text-[theme(fontSize.tw18)] tracking-[-0.2px]`}
+    ${({ label }) => (label ? tw`py-[8px] px-[12px]` : tw`p-[8px]`)};
 
     ${({ color }) => {
         switch (color) {
